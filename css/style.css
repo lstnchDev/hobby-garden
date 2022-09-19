@@ -1,0 +1,332 @@
+@font-face {
+    font-family: Fredoka one;
+    src: url('../fontFamily/FredokaOne-Regular.ttf');
+}
+@font-face {
+    font-family: Gilroy;
+    src: url('../fontFamily/Gilroy-Light.otf');
+}
+:root{
+    --titleFont: Fredoka one;
+    --textFont: Gilroy;
+    --titleColor: #374A3D;
+    --textColor: #678570;
+    --green: #0CA941;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Gilroy;
+}
+.wrap{
+    max-width: 1170px;
+    margin: 0 auto;
+    box-sizing: border-box;   
+}
+a{
+    text-decoration: none;
+    color: var(--textColor);
+    font-size: 1.125rem;
+
+}
+h1{
+    color: var(--titleColor);
+    font-family: var(--titleFont);
+    font-size: 4.5rem;
+    font-weight: 400;
+
+}
+.green-span{
+    color: var(--green);
+}
+h3 a{
+    color: var(--titleColor);
+    font-family: var(--titleFont);
+    font-size: 2rem;
+    font-weight: 700;
+    
+}
+
+h2{
+    color: var(--titleColor);
+    font-family: var(--titleFont);
+    font-size: 2.25rem;
+    
+}
+h4{
+    color: var(--titleColor);
+    font-family: var(--titleFont);
+    font-size: 1.375rem;
+    padding-bottom: 25px;
+    font-weight: 700;
+
+}
+h5{
+    color: var(--titleColor);
+    font-family: var(--titleFont);
+    font-size: 1rem;
+    padding: 15px 0 20px;
+    font-weight: 700;
+
+}
+p{
+    color: var(--textColor);
+    font-size: 1.125rem;
+    line-height: 32px;
+
+}
+h3{
+    color: var(--titleColor);
+    font-family: var(--titleFont);
+    font-size: 1.875rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+body{
+    background-color: #e5f0e8;
+}
+.logo{
+    display: flex;
+}
+.logo::before{
+    content:url('../img/logo.jpg');
+    width: 36px;
+    padding-right: 10px;
+    cursor: pointer;
+
+}
+li {
+    list-style-type: none;
+}
+.header-menu{
+    display: flex;
+    align-items: center;
+
+}
+.header-menu a{
+    color: var(--textColor);
+    font-family: var(--textFont);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+.header-menu li{
+    margin-left: 55px;
+}
+.btn-login{
+    background-color: var(--green);
+    border: none;
+    padding: 10px 32px;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 0;
+}
+.header-main{
+    display: flex;
+    padding: 35px 0 60px;
+    justify-content: space-between;
+}
+.header-left{
+    align-self: center;
+    width: 50%;
+}
+.header-right{
+    width: 45%;
+}
+.header-left p{
+    color: var(--textColor);
+    font-size: 1.125rem;
+    padding: 35px 0;
+}
+.btn-eclipse{
+    color: var(--titleColor);
+    font-size: 1.125rem;
+    border: 1px solid var(--green);
+    background-color: white;
+    padding: 25px 60px 25px 36px;
+    border-radius: 60%;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-eclipse::after{
+    content:url('../img/btn_arrow.jpg');
+    margin-left: 10px;
+}
+.landscape-service{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 23px 19px 138px -45px rgba(12, 169, 65, 0.13);
+    border-radius: 28px;
+    padding: 48px 40px 40px 140px;
+    background-color: white;
+    margin-bottom: 100px;
+}
+.service-left{
+    width: 40%;
+}
+.service-right p{
+    /* font-size: 1rem;
+    font-weight: 500; */
+}
+.service-right{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    align-self: center;
+    margin-left: 70px;
+}
+.number-title{
+    font-family: var(--textFont);
+    color: var(--green);
+    font-size: 3.75rem;
+    font-weight: 800;
+    transform: rotate(33.13deg);
+    position: relative;
+    line-height: normal;
+    
+}
+
+.number-bg{
+    position: absolute;
+    width: 83.13px;
+    height: 72.65px;
+    background: #ECF8F0;
+    transform: rotate(-33.13deg);
+    border-radius: 50%;
+
+}
+.number-descr{
+    font-size: 1.125rem;
+    font-weight: 600;
+    position: relative;
+    padding-top: 80px;
+
+}
+.prof-garden{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 88px;
+
+}
+.prof-garden-right{
+    align-self: center;
+    padding-left: 56px;
+}
+.prof-garden-right p{
+    font-size: 1.125rem;
+    padding: 30px 0 40px;
+}
+.prof-service{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 130px;
+}
+.prof-service img{
+}
+.prof-service-left{
+    align-self: center;
+    width: 40%;
+
+}
+.prof-service-text{
+    font-size: 1.125rem;
+    padding: 30px 0 40px;
+}
+.plant-store{
+    text-align: center;
+    padding-bottom: 130px;
+}
+.plant-store p{
+    padding-top: 30px;
+    max-width: 50%;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+.store-slider{
+    display: flex;
+    padding-top: 50px;
+    gap: 45px;
+}
+.store-item{
+    background: #FFFFFF;
+    border: 0.5px solid rgba(0, 0, 0, 0.36);
+    border-radius: 37px;
+    padding: 30px 35px;
+    width: 33%;
+}
+.star-review{
+    display: flex;
+    justify-content: space-between;
+}
+.price-btn{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+}
+.btn-cart{
+    height: 43px;
+    padding: 0 20px;
+    border: 0.5px solid rgba(55, 74, 61, 0.36);
+    border-radius: 10px;
+    background: #FFFFFF;
+}
+.store-item h3{ 
+    font-size: 1.5rem;
+}
+.email{
+    background: #f8f8f8a1;
+    border-radius: 19px;
+    text-align: center;
+    padding: 95px 256px 131px 256px;
+    margin-bottom: 128px;
+    backdrop-filter: blur(0.6rem);
+}
+.email p{
+    padding: 30px 0 50px;
+    font-weight: 500;
+}
+.btn-email{
+    background-color: var(--green);
+    color: white;
+    border: none;
+    padding: 25px 70px;
+    border-radius: 10px;
+}
+.email input{
+    border: 1px solid var(--green);
+    border-radius: 10px;
+    padding: 25px 34px;
+}
+.footer{
+    display: flex;
+    padding-bottom: 90px;
+    justify-content: space-between;
+}
+.footer-soc{
+    display: flex;
+    justify-content: space-between;
+    max-width: 162px;
+}
+.footer-item-logo{
+    width: 28%;
+}
+.footer-soc{
+    display: flex;
+    justify-content: space-between;
+    max-width: 162px;
+    margin-top: 35px;
+}
+.footer-item{
+    width: 20%;
+}
+.footer-item li{
+    margin-bottom: 20px;
+}
