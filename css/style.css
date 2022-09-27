@@ -12,6 +12,8 @@
     --titleColor: #374A3D;
     --textColor: #678570;
     --green: #0CA941;
+    --greenHover: #006421;
+    --inputFocus: #98d6ad;
 }
 *{
     padding: 0;
@@ -22,12 +24,17 @@
     max-width: 1170px;
     margin: 0 auto;
     box-sizing: border-box;   
+    padding: 0 50px;
 }
 a{
     text-decoration: none;
     color: var(--textColor);
     font-size: 1.125rem;
-
+    transition: 0.2s ;
+}
+.hover-nav:hover,
+.hover-nav:focus{
+    color: green;
 }
 h1{
     color: var(--titleColor);
@@ -84,20 +91,27 @@ h3{
 }
 body{
     background-color: #e5f0e8;
+    
 }
 .logo{
     display: flex;
 }
 .logo::before{
-    content:url('../img/logo.jpg');
+    content:url('../img/logo.png');
     width: 36px;
     padding-right: 10px;
     cursor: pointer;
 
 }
+.logo a:hover,
+.logo a:focus,
+.footer-soc a:hover{
+    border: none;
+}
 li {
     list-style-type: none;
 }
+
 .header-menu{
     display: flex;
     align-items: center;
@@ -108,6 +122,7 @@ li {
     font-family: var(--textFont);
     font-size: 1.125rem;
     font-weight: 600;
+    
 }
 .header-menu li{
     margin-left: 55px;
@@ -121,6 +136,11 @@ li {
     font-weight: 600;
     border-radius: 6px;
     cursor: pointer;
+    transition: 0.2s linear;
+}
+.btn-login:hover{
+    background-color: var(--greenHover);
+  
 }
 .header-top{
     display: flex;
@@ -139,6 +159,9 @@ li {
 .header-right{
     width: 45%;
 }
+.header-right img{
+    width: 100%;
+}
 .header-left p{
     color: var(--textColor);
     font-size: 1.125rem;
@@ -153,10 +176,15 @@ li {
     border-radius: 60%;
     font-weight: 600;
     cursor: pointer;
+    transition: 0.2s linear;
 }
 .btn-eclipse::after{
-    content:url('../img/btn_arrow.jpg');
+    content:url('../img/btn_arrow.png');
     margin-left: 10px;
+}
+.btn-eclipse:hover{
+    background-color: var(--greenHover);
+    color: white;
 }
 .landscape-service{
     display: flex;
@@ -250,21 +278,29 @@ li {
     font-size: 1.125rem;
     font-weight: 500;
 }
-.store-slider{
+.store{
     display: flex;
     padding-top: 50px;
-    gap: 45px;
+    gap: 40px;
+    flex-wrap: wrap;
+
 }
 .store-item{
     background: #FFFFFF;
     border: 0.5px solid rgba(0, 0, 0, 0.36);
     border-radius: 37px;
     padding: 30px 35px;
-    width: 33%;
+    width: 24%;
+
+    
 }
-.star-review{
-    display: flex;
-    justify-content: space-between;
+.store-item h3{
+    text-align: start;
+}
+
+.price p{
+    padding: 0;
+    margin: 0;
 }
 .price-btn{
     display: flex;
@@ -277,6 +313,14 @@ li {
     border: 0.5px solid rgba(55, 74, 61, 0.36);
     border-radius: 10px;
     background: #FFFFFF;
+    cursor: pointer;
+    transition: 0.2s linear;
+    align-self: center;
+}
+.btn-cart:hover,
+.btn-cart:focus{
+    background-color: var(--green);
+    color: white;
 }
 .store-item h3{ 
     font-size: 1.5rem;
@@ -299,11 +343,24 @@ li {
     border: none;
     padding: 25px 70px;
     border-radius: 10px;
+    margin: 25px 0;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.btn-email:hover,
+.btn-email:focus{
+    background-color: var(--greenHover);
 }
 .email input{
     border: 1px solid var(--green);
     border-radius: 10px;
     padding: 25px 34px;
+    width: 50%;
+}
+.email input:focus{
+    border: 1px solid var(--greenHover);
+    background-color: var(--inputFocus);
+    
 }
 .footer{
     display: flex;
@@ -324,9 +381,162 @@ li {
     max-width: 162px;
     margin-top: 35px;
 }
+.footer-soc img:hover{
+    background-color: #006421;
+    padding: 5px;
+}
 .footer-item{
     width: 20%;
 }
 .footer-item li{
     margin-bottom: 20px;
+}
+footer-soc:first-child{
+    color: #006421;
+}
+
+@media (max-width: 1180px) {
+    h1{
+        font-size: 3rem;
+    }
+    .plant-store p{
+        max-width: 100%;
+    }
+
+    .email {
+        padding: 125px;
+    }
+    .store-item{
+        width: calc(40%);
+    }
+    .store{
+        justify-content: center;
+    }
+    .landscape-service{
+        padding: 40px;
+    }
+    .prof-garden {
+        flex-direction: column;
+        text-align: center;
+    }
+    .prof-garden img{
+        width: 80%;
+        align-self: center;
+        padding-bottom: 50px;
+    }
+    .prof-service{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .prof-service img{
+        align-self: center;
+        padding-bottom: 50px;
+    }
+    .prof-service-left{
+        width: 100%;
+    }
+}
+@media (max-width: 975px){
+    .landscape-service {
+        flex-direction: column;
+    }
+    .service-left{
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        
+    }
+    .service-right{
+        padding-top: 25px;
+        margin: 0;
+        margin-left: 70px;
+    }
+    
+    .number-descr{
+        width: 93%
+    }
+   
+    h1{
+        font-size: 2rem;
+    }
+    .btn-eclipse{
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 825px){
+    .email {
+        padding: 0;
+    }
+    .store-item {
+        width: calc(53%);
+    }
+}
+@media (max-width: 755px){
+    h1{
+        font-size: 1.5rem;
+    }
+    .header-left p{
+        font-size: 1rem;
+    }
+    .email {
+        padding: 0;
+    }
+    .service-right{
+    }
+    .service-item{
+    }
+    .number-descr{
+        width: 100%;
+    }
+    .service-item{
+    }
+    .footer-item{
+        width: 40%;
+    }
+    .footer-item-logo {
+        width: 50%;
+    }
+    
+    .hide-media{
+        display: none;
+    }
+    .store-item {
+        width: calc(63%);
+    }
+}
+@media (max-width: 650px){
+    .prof-service img {
+        width: 100%;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .header-main{
+        flex-direction: column;
+    }
+    .store-item{
+        width: 100%;
+    }
+    .header-left{
+        width: 100%;
+    }
+    .header-right{
+        display: none;
+    }
+    .service-right{
+        margin-left: 0;
+    }
+    .prof-garden-right{
+        padding: 0;
+    }
+    .footer {
+        flex-direction: column;
+        
+    }
+    .footer-item-logo, .footer-item{
+        align-self: center;
+        width: 100%;
+        margin-bottom: 50px;
+
+    }
 }
