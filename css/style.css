@@ -89,7 +89,7 @@ a:hover{
     color: var(--greenHover);
 }
 .btnBurger { 
-    margin-bottom: 25px;
+    padding-bottom: 25px;
 }
 h1{
     color: var(--titleColor);
