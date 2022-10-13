@@ -144,6 +144,10 @@ h3{
     font-weight: 400;
     margin-bottom: 10px;
 }
+html{
+    scroll-behavior: smooth;
+
+}
 body{
     background-color: #e5f0e8;
     
